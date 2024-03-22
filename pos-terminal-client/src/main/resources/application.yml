@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pos-terminal-client
+server:
+  port: 8082
+
+logging:
+  level:
+    com:
+      cardconnect:
+        posterminalclient: DEBUG
+
+hivemq:
+  client:
+    server-uri: tcp://localhost:1883
+    client-id: ${spring.application.name}
+

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: bolt-server-client
+server:
+  port: 8081
+
+logging:
+  level:
+    com:
+      cardconnect:
+        boltserverclient: DEBUG
+
+hivemq:
+  client:
+    server-uri: tcp://localhost:1883
+    client-id: ${spring.application.name}
